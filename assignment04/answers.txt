@@ -1,0 +1,18 @@
+Rhyan Medina
+
+1.Bubble sort is slower than selection and insertion sort because bubble sort needs
+to check the entire array at least twice. Selection sort may need to pass through the
+array multiple times, but the amount of comparisons decreases every time. Insertion
+sort doesn't retread the array.
+
+2. As stated in answer 1, Selection sort will usually pass through the array multiple
+times, which Insertion sort doesn't do.
+
+3. Since the three sorting algorithms featured in this assignment sort by numerical
+value, I think objects of a custom class, in order to be in an array that is sorted by
+these algorithms, would need to have a member variable storing numerical data 
+(int, float, etc.)
+
+4.Some sorting algorithms are combinations of multiple basic sorting algorithms, so
+I would think std::sort is one of those. I would also assume it is more optimized than
+the ones I make.
