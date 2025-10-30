@@ -39,7 +39,13 @@ namespace csi281 {
   // Performs an in-place ascending sort of *array* of size *length*
   // using the bubble sort algorithm
   template <typename T> void bubbleSort(T array[], const int length) {
-    // YOUR CODE HERE
+    for (int i = 0; i < length; i++) {
+      for (int j = 0; j < (n - 1); j++) {
+        if (array[j] > array[j + 1]) {
+          swap(array[j], array[j + 1])
+        }
+      }
+    }
   }
 
   // Performs an in-place ascending sort of *array* of size *length*
