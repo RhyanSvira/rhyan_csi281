@@ -30,6 +30,8 @@
 #include <algorithm>  // for remove_if()
 #include <iostream>
 #include <sstream>
+#include <fstream>
+
 
 using namespace std;
 
@@ -75,6 +77,8 @@ namespace csi281 {
   // You'll also want to construct a CityYear from what you have read from the file
   CityYear readLine(ifstream &file) {
     // YOUR CODE HERE
+
+     
   }
 
   // Read city by looking at the specified lines in the CSV
@@ -87,5 +91,27 @@ namespace csi281 {
   // create an array of CityYear instances to pass to the CityTemperatureData constructor
   // when the CityTemperatureData is created, it will take ownership of the array
   CityTemperatureData* readCity(string cityName, string fileName, int startLine, int endLine) {
+    CityYear *data = new CityYear[(endLine - startLine) + 1];
+
+    ifstream fin;
+    fin.open(fileName);
+    if (!fin.good()) {
+      std::cout << "File " << fileName << " could not be opened." << std::endl;
+    }
+    while (!fin.eof()) {
+        for (int i = 0; i < startLine; i++)
+        {
+            string junk;
+            std::getline(fin, junk);
+        }
+        for (int i = startLine; i < endLine; i++) {
+          /*readLine(fin);*/
+          int index = 0;
+          data[index] = readLine(fin);
+          index++;
+        }
+    }
+
+    return new CityTemperatureData(cityName, data, (endLine - startLine) + 1);
   }
 }  // namespace csi281
