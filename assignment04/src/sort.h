@@ -52,6 +52,15 @@ namespace csi281 {
   // using the selection sort algorithm
   template <typename T> void selectionSort(T array[], const int length) {
     // YOUR CODE HERE
+    for (int i = 0; i < length; i++) {
+      int mindex = i;
+      for (int j = i + 1; j < length; j++) {
+        if (array[j] < array[mindex]) {
+          mindex = j;
+        }
+      }
+      swap(array[i], array[mindex]);
+    }
   }
 
   // Performs an in-place ascending sort of *array* of size *length*
