@@ -68,7 +68,15 @@ namespace csi281 {
   template <typename T> void insertionSort(T array[], const int length) {
     // YOUR CODE HERE
 
-
+      if (length <= 1) return;
+    for (size_t lastSorted = 1; lastSorted < length; lastSorted++) {
+        for (size_t i = lastSorted; i > 0; i--) {
+        if (array[i - 1] > array[i])
+          swap(array[i - 1], array[i]);
+        else
+          break;
+        }
+    }
   }
 }  // namespace csi281
 
