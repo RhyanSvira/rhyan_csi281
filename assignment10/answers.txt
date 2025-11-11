@@ -1,3 +1,8 @@
 Rhyan Medina
 
-1. Jarn
+1. Jarnik's algorithm could be reworked into finding maximum spanning trees by checking for the more expensive edge
+(greater than, instead of less than) and using a "most expensive" variable with an initial value of zero.
+
+2. Minimum spanning trees have a defined starting point, and often split off into multiple branches.
+The Travelling Salesman Problem requires solutions to reach all points in a contiguous loop.
+source: https://en.wikipedia.org/wiki/Travelling_salesman_problem
