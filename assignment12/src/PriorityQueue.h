@@ -106,6 +106,12 @@ namespace csi281 {
     // NOTE: Macros left() and right() are defined at the top of this file
     void maxHeapify(int i) {
       // YOUR CODE HERE
+      T comparison = 0;
+      for (int i = 1; i < heapSize; i++) {
+        if (heap[i] < comparison) {
+          swap(heap[i], heap[comparison]);
+        }
+      }
     }
 
     vector<T> heap;
