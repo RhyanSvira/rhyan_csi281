@@ -59,6 +59,7 @@ namespace csi281 {
     // NOTE: Our heap starts at 0, not 1
     T peek() {
       // YOUR CODE HERE
+      return heap[heapSize - 1];
     }
 
     // Remove the next element (max element) in the heap and return it
@@ -69,6 +70,9 @@ namespace csi281 {
     // after a pop.
     T pop() {
       // YOUR CODE HERE
+      T popped = peek();
+      heapSize--;
+      return popped;
     }
 
     // Put a new element into the priority queue
@@ -81,6 +85,8 @@ namespace csi281 {
     // the end of the vector heap
     void push(T key) {
       // YOUR CODE HERE
+      heap.push_back(key);
+      heapSize++;
     }
 
     // How many items are in the priority queue?
