@@ -34,6 +34,10 @@
 #include "SVGPainter.h"
 #include "util.h"
 
+//included by Rhyan Medina
+#include <ctime>
+#include <cstdlib>
+
 using namespace std;
 using namespace csi281;
 using namespace SVGChart;
@@ -100,6 +104,11 @@ static void drawSearchChart() {
 
 // Test all code and draw charts.
 int main(int argc, char *argv[]) {
+  //seed reandom number generation
+  //added by Rhyan Medina
+  srand(time(0));
+
+
   // draw chart
   drawSearchChart();
 }

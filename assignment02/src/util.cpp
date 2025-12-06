@@ -33,6 +33,10 @@
 
 #include "search.h"
 
+//included by Rhyan
+#include <ctime>
+#include <cstdlib>
+
 using namespace std;
 
 namespace csi281 {
@@ -42,6 +46,11 @@ namespace csi281 {
   // Suggest using the facilities in STL <random>
   int *randomIntArray(const int length, const int min, const int max) {
     // YOUR CODE HERE
+    int *nArray[] = new int;
+    for (int i = 0; i < length; i++) {
+      *nArray[i] = (rand() % max) + min;
+    }
+    return *nArray;
   }
 
   // Finds the speed of linear versus binary search
